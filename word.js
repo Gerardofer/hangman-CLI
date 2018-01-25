@@ -14,7 +14,10 @@ class WordGenerator {
   }
   replaceLetter(answers){
     let wordIndex = this.word.indexOf(answers);
-    if (this.word.includes(answers)){
+    if (answers === ""){
+      console.log("Invalid entree, please enter a letter")
+    }
+    else if (this.word.includes(answers)) {
       this.newWordArray.splice(wordIndex, 1);
       this.newWordArray.splice(wordIndex, 0, answers);
       console.log(JSON.stringify(this.newWordArray.join(" ")));

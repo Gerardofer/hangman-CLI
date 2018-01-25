@@ -16,16 +16,16 @@ var question = function (){
         message: "Please enter a letter: "
       }
     ]).then(answers => {
-        word.replaceLetter(answers.guess);
-       if (word.word.length === word.rightArray.length){
+      word.replaceLetter(answers.guess);
+      if (word.word.length === word.rightArray.length){
         console.log("Your've guessed the right animal!", word.word);
         counter = 9;
-       }else if (word.rightArray.length + word.wrongArray.length == 9) {
+      }
+      else if (word.rightArray.length + word.wrongArray.length == 10) {
         console.log("Sorry, you've used all your chances");
-       }
-        counter++;
-        test = false;word.wrongArray = [];
-        question();
+      }
+      counter++;
+      question();
     });
   }
   else {
