@@ -4,11 +4,9 @@ const Word = require('./word.js');
 let word = new Word;
 let counter = 0;
 
-// console.log(word.newWordArray);
 word.printWordUnder();
 
 var question = function (){
-	// word.printWordUnder()
   if (counter < 10){
     inquirer.prompt([
       {
@@ -46,7 +44,6 @@ function askAgain() {
         }
     ]).then( answers => {
         if (answers.choice === "Play Again"){
-          // word.printWordUnder();
           startGame();
         }
         else {
@@ -63,4 +60,4 @@ function startGame () {
   word.wrongArray = [];
   word.printWordUnder();
   question();
-}
+};

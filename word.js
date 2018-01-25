@@ -1,9 +1,4 @@
-const wordArray = ['cat', 'dog', 'horse', 'fish'];
-//const userInput = process.argv[2];
-// let newWordArray = [];
-//let rightArray = [];
-//let wrongArray = [];
-
+const wordArray = ['leopard', 'dog', 'horse', 'fish', 'goat', 'dove'];
 
 class WordGenerator {
   constructor(word, rightArray, wrongArray, newWordArray){
@@ -16,7 +11,6 @@ class WordGenerator {
 	    for (var i = 0; i < this.word.length; i++){
 	       this.newWordArray.push("_");
 	    };
-    // console.log(this.word);
   }
   replaceLetter(answers){
     let wordIndex = this.word.indexOf(answers);
@@ -33,13 +27,7 @@ class WordGenerator {
       this.wrongArray.push(answers);
     }
   }
-}
+};
 
-
-//console.log("Hello!!!");
 module.exports = WordGenerator;
-
-//var newWord = new WordGenerator();
-//newWord.printWordUnder();
-//newWord.replaceLetter();
 
