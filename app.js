@@ -6,6 +6,7 @@ let counter = 0;
 
 word.printWordUnder();
 
+console.log("GUESS WHAT ANIMAL")
 var question = function (){
   if (counter < 10){
     inquirer.prompt([
@@ -17,7 +18,7 @@ var question = function (){
     ]).then(answers => {
         word.replaceLetter(answers.guess);
        if (word.word.length === word.rightArray.length){
-        console.log("Your've guessed the wight word ", word.word);
+        console.log("Your've guessed the right animal!", word.word);
         counter = 9;
        }else if (word.rightArray.length + word.wrongArray.length == 9) {
         console.log("Sorry, you've used all your chances");

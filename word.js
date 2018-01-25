@@ -1,4 +1,4 @@
-const wordArray = ['leopard', 'dog', 'horse', 'fish', 'goat', 'dove'];
+const wordArray = ['leopard', 'dog', 'horse', 'fish', 'goat', 'dove', 'lion', 'rhino', 'bear', 'puma', 'pig', 'tiger', 'whale'];
 
 class WordGenerator {
   constructor(word, rightArray, wrongArray, newWordArray){
